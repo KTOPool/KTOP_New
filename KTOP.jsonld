@@ -1,32 +1,37 @@
 {
   "@context": {
-    "@language": "en-us",
     "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
-    "CIPQQQ": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-QQQ/README.md#",
+    "CIP119": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0119/README.md#",
     "hashAlgorithm": "CIP100:hashAlgorithm",
     "body": {
-      "@id": "CIPQQQ:body",
+      "@id": "CIP119:body",
       "@context": {
         "references": {
-          "@id": "CIPQQQ:references",
+          "@id": "CIP119:references",
           "@container": "@set",
           "@context": {
             "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
             "Other": "CIP100:OtherReference",
             "label": "CIP100:reference-label",
             "uri": "CIP100:reference-uri",
             "referenceHash": {
-              "@id": "CIPQQQ:referenceHash",
+              "@id": "CIP119:referenceHash",
               "@context": {
-                "hashDigest": "CIPQQQ:hashDigest",
+                "hashDigest": "CIP119:hashDigest",
                 "hashAlgorithm": "CIP100:hashAlgorithm"
               }
             }
           }
         },
-        "dRepName": "CIPQQQ:dRepName",
-        "bio": "CIPQQQ:bio",
-        "email": "CIPQQQ:email"
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": "CIP119:image",
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
       }
     },
     "authors": {
@@ -46,19 +51,25 @@
     }
   },
   "authors": [],
-  "hashAlgorithm": {
-    "@value": "blake2b-256"
-  },
+  "hashAlgorithm": "blake2b-256",
   "body": {
-    "bio": {
-      "@value": "Test"
-    },
-    "dRepName": {
-      "@value": "KTOP"
-    },
-    "email": {
-      "@value": "ktopool.kr@gmail.com"
-    },
-    "references": []
+    "doNotList": false,
+    "givenName": "KTOP",
+    "motivations": ".",
+    "objectives": "DRep of the Delegator, by the Delegator, For the Delegator",
+    "paymentAddress": "addr1qx8lzdl0l0z3tzlxmeulfl04rlhqmpxw3cru7wsqd5qgjyahhjruwur8splggwyjw33egnsh0wtgxc28pys7ld57k7yqnktkvw",
+    "qualifications": ".",
+    "references": [
+      {
+        "@type": "Link",
+        "label": "KTOP Pool",
+        "uri": "https://x.com/KTOP_Pool"
+      },
+      {
+        "@type": "Identity",
+        "label": "KTOP | Cardano SPO | World Mobile ENO",
+        "uri": "https://x.com/KTOP_Pool"
+      }
+    ]
   }
 }
